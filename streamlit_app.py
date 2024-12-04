@@ -151,6 +151,7 @@ with tab4:
         - E o site pega os dados deste outro site https://vizhub.healthdata.org/gbd-results/
 
         Fizemos os seguinte filtro para baixar os dados:
+        """
 
         ConflitoArmado = pd.read_csv('content/IHME-GBD_2021_DATA-dc596585-1.csv')
 
