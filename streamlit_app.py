@@ -664,53 +664,53 @@ with tab4:
         r2 = r2_score(preco_real, preco_previsto)
         print(f'R2: {r2}')
 
-        """O modelo LSTM também não obteve resultados aceitáveis, está melhor que o SARIMA, mas o R2 está bem baixo.
+        """O modelo LSTM também não obteve resultados aceitáveis, está melhor que o SARIMA, mas o R2 está bem baixo."""
 
-        Vamos tentar outro modelo.
+        # Vamos tentar outro modelo.
 
-        ##Criar o modelo PROPHET
-        """
+        # ##Criar o modelo PROPHET
+        # """
 
-        from prophet import Prophet
-        from sklearn.metrics import mean_absolute_error
+        # from prophet import Prophet
+        # from sklearn.metrics import mean_absolute_error
 
-        df_filtrado.head()
+        # df_filtrado.head()
 
-        # Preparar os dados
-        df_prophet = df_filtrado.copy()
-        df_prophet.reset_index(inplace=True)
-        df_prophet.columns = ['ds', 'y']
+        # # Preparar os dados
+        # df_prophet = df_filtrado.copy()
+        # df_prophet.reset_index(inplace=True)
+        # df_prophet.columns = ['ds', 'y']
 
-        # Suavizar a série (média móvel)
-        df_prophet['y'] = df_prophet['y'].rolling(window=7, center=False).mean()
-        df_prophet.dropna(inplace=True)
+        # # Suavizar a série (média móvel)
+        # df_prophet['y'] = df_prophet['y'].rolling(window=7, center=False).mean()
+        # df_prophet.dropna(inplace=True)
 
-        # Configurar modelo com ajustes
-        model = Prophet(
-            daily_seasonality=False,
-            changepoint_prior_scale=0.5,  # Mais flexível com mudanças de tendência
-            uncertainty_samples=100  # Reduz amostras de incerteza
-        )
-        model.add_seasonality(name='weekly', period=7, fourier_order=10)  # Ajustar sazonalidade semanal
+        # # Configurar modelo com ajustes
+        # model = Prophet(
+        #     daily_seasonality=False,
+        #     changepoint_prior_scale=0.5,  # Mais flexível com mudanças de tendência
+        #     uncertainty_samples=100  # Reduz amostras de incerteza
+        # )
+        # model.add_seasonality(name='weekly', period=7, fourier_order=10)  # Ajustar sazonalidade semanal
 
-        # Ajustar o modelo
-        model.fit(df_prophet)
+        # # Ajustar o modelo
+        # model.fit(df_prophet)
 
-        # Criar previsões futuras
-        future = model.make_future_dataframe(periods=15)
-        forecast = model.predict(future)
+        # # Criar previsões futuras
+        # future = model.make_future_dataframe(periods=15)
+        # forecast = model.predict(future)
 
-        # Visualizar os resultados
-        fig = model.plot(forecast)
-        plt.title("Previsões Refinadas com Prophet (15 dias)", fontsize=14)
-        plt.show()
+        # # Visualizar os resultados
+        # fig = model.plot(forecast)
+        # plt.title("Previsões Refinadas com Prophet (15 dias)", fontsize=14)
+        # plt.show()
 
-        # Ver componentes
-        fig_components = model.plot_components(forecast)
-        #create y_true
-        y_true = df_prophet['y']
-        mae = mean_absolute_error(y_true, y_pred)
-        print(f"Erro Absoluto Médio (MAE): {mae}")
+        # # Ver componentes
+        # fig_components = model.plot_components(forecast)
+        # #create y_true
+        # y_true = df_prophet['y']
+        # mae = mean_absolute_error(y_true, y_pred)
+        # print(f"Erro Absoluto Médio (MAE): {mae}")
 with tab5:
         st.write('Conclusão')
 
