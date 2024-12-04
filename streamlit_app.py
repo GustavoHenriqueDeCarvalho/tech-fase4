@@ -95,7 +95,7 @@ with tab2:
 
 with tab3:
         # create subheader
-        st.subheader('Demanda de Energia')
+        st.subheader('**Demanda de Energia**')
         st.write('Nesse primeiro momento de exploração alteramos a medida de energia no DataSet em relação ao apresentado, pois o valor original de MWh onde havia países com valores superiores a trilhão, onde fizemos a transformação para GWh para um melhor entendimento. Gostaríamos de demonstrar  alguns pontos de demanda de energia do Paises em relação com sua população,  observamos as seguintes informações: ')
         st.write('Se compararmos pela média da População mundial levando em conta os dados de 1950 até 2023 conseguimos observar que se não levarmos em conta a China que seria um dos países com maior quantidade de habitantes os países mais desenvolvidos ocupam a maior parte do topo do ranking de países com maiores demandas por energia. Isso nos mostra que densidade populacional não significa necessariamente mais custo com energia, um país que nos mostra isso seria o Brasil, que mesmo sendo um dos países com a maior média de população não chega a ser um dos dez maiores países com demanda de energia.')
         st.image("imagens/Demanda_energia_país01.JPG")
@@ -128,11 +128,10 @@ with tab3:
         st.image("imagens/Variacao_preco_petroleo06.JPG")
         st.write('Podemos reparar que o preço médio no decorrer do tempo fica em US$ 52,03.')     
 with tab4:
-        st.write('Machine Learning')
         # -*- coding: utf-8 -*-
         """FIAP_PENULTIMO_TRABALHO.ipynb
-
-        Original file is located at
+ 
+        Arquivo original em:
             https://colab.research.google.com/drive/1Gb3Ch5yoz9dnIax8BqqFZWWMX_2n6poR
         """
 
@@ -141,9 +140,11 @@ with tab4:
         # import matplotlib.pyplot as plt
         # import numpy as np
 
-        """# Criação da tabela para usar no power bi
+        """
+        
+        ## Criação da tabela para usar no power bi
 
-        ##Importando dados de mortes em guerra (conflitos armados)
+        ### Importando dados de mortes em guerra (conflitos armados)
 
         fontes:
         - vimos o dado primeiro neste site https://ourworldindata.org/grapher/annual-number-of-deaths-by-cause
@@ -744,11 +745,10 @@ with tab4:
         mae = mean_absolute_error(y_true, y_pred)
         print(f"Erro Absoluto Médio (MAE): {mae}")
 with tab5:
-        st.write('Conclusão')
         paragraphs = [
         '1º**Demanda de energia por país:** a grande demanda por energia no Reino Unido entre 1990 e 2017 foi impulsionada pelo crescimento econômico, mudanças no estilo de vida e padrões de consumo, aumento da urbanização, bem como o impacto climático e o aumento da população. A transformação da economia, com o crescimento dos setores de serviços e tecnologia, também foi um fator-chave nesse aumento da demanda energética.',
-        '2º**Conflito Armado:**Os conflitos armados têm um impacto significativo no preço do petróleo Brent devido a vários fatores econômicos, geopolíticos e de oferta e demanda.    Qualquer incerteza sobre a oferta ou a segurança do fornecimento de petróleo pode gerar uma reação imediata dos mercados. A diminuição da oferta, a elevação do risco geopolítico, o impacto nos transportes e as sanções econômicas especialmente em regiões-chave produtoras contribuem para a volatilidade do preço do petróleo, levando-o a aumentar.',
-        '3º**População e Demanda por Energia por ano:**Não apenas a população cresce, mas além disso, também ocorrem mudanças no estilo de vida e diversas evoluções tecnológicas, eletrônicas, industriais e urbanas, que expandem a demanda por energia ano após ano. Estes fatores ligados com a crescente população tornam a demanda cada vez maior. ',
+        '2º**Conflito Armado:** Os conflitos armados têm um impacto significativo no preço do petróleo Brent devido a vários fatores econômicos, geopolíticos e de oferta e demanda.    Qualquer incerteza sobre a oferta ou a segurança do fornecimento de petróleo pode gerar uma reação imediata dos mercados. A diminuição da oferta, a elevação do risco geopolítico, o impacto nos transportes e as sanções econômicas especialmente em regiões-chave produtoras contribuem para a volatilidade do preço do petróleo, levando-o a aumentar.',
+        '3º**População e Demanda por Energia por ano:** Não apenas a população cresce, mas além disso, também ocorrem mudanças no estilo de vida e diversas evoluções tecnológicas, eletrônicas, industriais e urbanas, que expandem a demanda por energia ano após ano. Estes fatores ligados com a crescente população tornam a demanda cada vez maior. ',
         '4º**Variação de preço do Petróleo:** O petróleo é uma commodity global essencial e altamente sensível a qualquer instabilidade, por isso são diversos os fatores que podem causar uma variação do preço, desde crises econômicas, conflitos armados até a maiores demandas e crescimento exponencial da população com maiores inovações tecnológicas.'
             ]
 
