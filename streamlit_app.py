@@ -707,7 +707,8 @@ with tab4:
 
         # Ver componentes
         fig_components = model.plot_components(forecast)
-
+        #create y_true
+        y_true = df_prophet['y']
         mae = mean_absolute_error(y_true, y_pred)
         print(f"Erro Absoluto Médio (MAE): {mae}")
 with tab5:
