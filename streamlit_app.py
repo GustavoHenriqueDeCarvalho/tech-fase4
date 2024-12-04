@@ -39,8 +39,8 @@ st.sidebar.markdown(multi)
 tab1, tab2, tab3, tab4, tab5 = st.tabs(['Introdução', 'Método', 'Análise do Cenário', 'Machine Learning', 'Conclusão'])
 
 with tab1:
-        st.subheader('Introdução')
         multi = '''
+        ## Introdução
         Você foi contratado(a) para uma consultoria, e seu trabalho envolve analisar os dados de preço do petróleo Brent,
         que pode ser encontrado no site do Ipea. Essa base de dados histórica envolve duas colunas: data e preço (em dólares).    
         
@@ -51,6 +51,7 @@ with tab1:
           valor do petróleo, é determinado por uma combinação de fatores econômicos, políticos e ambientais. O Brent é extraído principalmente do Mar do
            Norte e serve como um benchmark para os contratos de petróleo negociados em mercados internacionais.  
         
+        ## Contextualização
         O preço do Brent é influenciado por eventos como conflitos geopolíticos, decisões da Organização dos Países Exportadores de Petróleo (OPEP),
          mudanças na oferta e demanda global, flutuações cambiais e o crescimento ou desaceleração econômica mundial. Outros fatores,
           como inovações tecnológicas na extração de petróleo e as políticas de transição para energias renováveis, também afetam o mercado do petróleo Brent.   
@@ -63,7 +64,7 @@ with tab1:
 
         Clique [aqui](http://www.ipeadata.gov.br/ExibeSerie.aspx?module=m&serid=1650971490&oper=view) para acessar os dados do IPEA
         Clique [aqui](https://app.powerbi.com/view?r=eyJrIjoiNTg0ZDMyY2MtMzMwNi00ZDQ3LWEzY2EtMDVmZjYzZWZiYmQwIiwidCI6IjFjZTUxYjk4LWY4MmYtNGYxNy1iNDRmLTZlNzc0MDE5ZDBlOSIsImMiOjR9) para acessar o PowerBI
-       Clique [aqui](https://colab.research.google.com/drive/1Gb3Ch5yoz9dnIax8BqqFZWWMX_2n6poR#scrollTo=X1RRCse9wRZI) para acessar o Machine Learning.
+        Clique [aqui](https://colab.research.google.com/drive/1Gb3Ch5yoz9dnIax8BqqFZWWMX_2n6poR#scrollTo=X1RRCse9wRZI) para acessar o Machine Learning.
         '''
         
         st.markdown(multi)
@@ -740,7 +741,7 @@ with tab4:
         # Ver componentes
         fig_components = model.plot_components(forecast)
         #create y_true
-        mae = mean_absolute_error(y, y_pred)
+        mae = mean_absolute_error(y_true, y_pred)
         print(f"Erro Absoluto Médio (MAE): {mae}")
 with tab5:
         st.write('Conclusão')
