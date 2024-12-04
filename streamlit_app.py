@@ -63,8 +63,8 @@ with tab1:
         O Dashboard foi realizado utilizando o Power Bi da Microsoft onde foram realizados insights utilizando dados do inicio de 2000 até 2017. Para que seja compreendido utilizamos dados sobre demanda de energia, mortes por conflito armado e produção de petróleo.
 
         Clique [aqui](http://www.ipeadata.gov.br/ExibeSerie.aspx?module=m&serid=1650971490&oper=view) para acessar os dados do IPEA
-        
-          
+
+
         Clique [aqui](https://app.powerbi.com/view?r=eyJrIjoiNTg0ZDMyY2MtMzMwNi00ZDQ3LWEzY2EtMDVmZjYzZWZiYmQwIiwidCI6IjFjZTUxYjk4LWY4MmYtNGYxNy1iNDRmLTZlNzc0MDE5ZDBlOSIsImMiOjR9) para acessar o PowerBI  
 
 
@@ -98,6 +98,7 @@ with tab2:
         st.write('Para a demonstração visual, foi feito um Dashboard utilizando o Power Bi da Microsoft onde foram realizados insights utilizando dados de 1990 até 2017 para assim contemplar de forma igualitária todos os dados que obtivemos no decorrer deste relatório. Para que seja compreendido utilizamos dados sobre demanda de energia, mortes por conflito armado e produção de petróleo. Como dito anteriormente O Brent é extraído principalmente do Mar do Norte, por isso em nosso dashboard, filtramos o continente europeu para termos diversas visões e tirarmos os insights que possam ser usados para decisões futuras.')	
 
 with tab3:
+        st.subheader('**Análise do Cenário**')
         # create subheader
         st.subheader('**Demanda de Energia**')
         st.write('Nesse primeiro momento de exploração alteramos a medida de energia no DataSet em relação ao apresentado, pois o valor original de MWh onde havia países com valores superiores a trilhão, onde fizemos a transformação para GWh para um melhor entendimento. Gostaríamos de demonstrar  alguns pontos de demanda de energia do Paises em relação com sua população,  observamos as seguintes informações: ')
@@ -764,4 +765,4 @@ with tab5:
         st.write('Disponível em: [https://mundoeducacao.uol.com.br/historiageral/guerra-civil-na-libia.htm](https://mundoeducacao.uol.com.br/historiageral/guerra-civil-na-libia.htm). Acesso em:19 nov. 2024.')
         st.write('Disponível em: [https://sites.ufpe.br/oci/2022/06/13/guerra-civil-na-libia-2011/](https://sites.ufpe.br/oci/2022/06/13/guerra-civil-na-libia-2011/). Acesso em:19 nov. 2024.')
         st.write('Disponível em: [https://www.bbc.com/portuguese/articles/c84m8d4xdzgo](https://www.bbc.com/portuguese/articles/c84m8d4xdzgo). Acesso em:19 nov. 2024.')
-        st.write('Disponível em: [https://www.bbc.com/portuguese/internacional-55351024](https://www.bbc.com/portuguese/internacional-55351024). Acesso em:19 nov. 2024.')
+        st.write('Disponível em: [https://www.bbc.com/portuguese/internacional-55351024](https://www.bbc.com/portuguese/internacional-55351024). Acesso em:19 nov. 2024.')  
