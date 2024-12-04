@@ -74,11 +74,26 @@ with tab2:
         st.write('**Capacidade de Aprendizado Automático:** Uma das principais vantagens do ML é que ele pode aprender automaticamente a partir de dados históricos sem a necessidade de programações manuais detalhadas. Isso permite que o modelo se adapte e melhore com o tempo, à medida que mais dados são disponibilizados.')
         st.write('**Automação e Eficiência:** O uso de ML para previsões reduz a necessidade de intervenção manual constante. Isso resulta em uma maior eficiência operacional, pois os modelos podem fazer previsões de forma autônoma, liberando os analistas para tarefas mais estratégicas.')
         st.write('**Análise em Tempo Real:** O ML é capaz de realizar previsões em tempo real ou quase em tempo real, o que é particularmente útil em áreas como o comércio eletrônico, a previsão do tempo, ou a análise de risco financeiro, onde decisões rápidas podem ser necessárias.')
+
+        st.write('Além essa ferramenta, para este trabalho também estamos fazendo o uso do Streamlit uma ferramenta para criar interfaces web interativas de forma rápida e simples, especialmente voltada para aplicações de machine learning e análise de dados, casando muito bem com os nossos objetivos neste contexto.')
+        st.write('Ao fazer uso desta ferramenta, também nos apropriamos das vantagens que a mesma traz, como:')
+
+        paragraphs = [
+        '**Facilidade de uso:** O Streamlit é projetado para ser extremamente simples de usar. Ele permite criar aplicações web com apenas algumas linhas de código Python.',
+        '**Integração com bibliotecas Python:** O Streamlit se integra de forma muito eficaz com bibliotecas populares de Python, como pandas, matplotlib, seaborn, plotly, scikit-learn, tensorflow, entre outras. Isso torna o desenvolvimento de aplicações de análise de dados e modelos de machine learning muito mais fluido.',
+        '**Desempenho e escalabilidade:** O Streamlit é projetado para ser rápido e eficiente. Ele é ótimo para protótipos e até para pequenas aplicações em produção, com boa performance mesmo em tempo real, dependendo da complexidade do modelo ou da aplicação.'
+    
+            ]
+
+        for paragraph in paragraphs:
+                st.write(paragraph)
+
+        st.write('Para a demonstração visual, foi feito um Dashboard utilizando o Power Bi da Microsoft onde foram realizados insights utilizando dados de 1990 até 2017 para assim contemplar de forma igualitária todos os dados que obtivemos no decorrer deste relatório. Para que seja compreendido utilizamos dados sobre demanda de energia, mortes por conflito armado e produção de petróleo. Como dito anteriormente O Brent é extraído principalmente do Mar do Norte, por isso em nosso dashboard, filtramos o continente europeu para termos diversas visões e tirarmos os insights que possam ser usados para decisões futuras.')	
+
 with tab3:
         # create subheader
         st.subheader('Demanda de Energia')
         st.write('Nesse primeiro momento de exploração alteramos a medida de energia no DataSet em relação ao apresentado, pois o valor original de MWh onde havia países com valores superiores a trilhão, onde fizemos a transformação para GWh para um melhor entendimento. Gostaríamos de demonstrar  alguns pontos de demanda de energia do Paises em relação com sua população,  observamos as seguintes informações: ')
-        #colocar graficos
         st.write('Se compararmos pela média da População mundial levando em conta os dados de 1950 até 2023 conseguimos observar que se não levarmos em conta a China que seria um dos países com maior quantidade de habitantes os países mais desenvolvidos ocupam a maior parte do topo do ranking de países com maiores demandas por energia. Isso nos mostra que densidade populacional não significa necessariamente mais custo com energia, um país que nos mostra isso seria o Brasil, que mesmo sendo um dos países com a maior média de população não chega a ser um dos dez maiores países com demanda de energia.')
         #colocar graficos
         st.write('Quando levantamos a produção do Óleo bruto conseguimos observar que os Estados Unidos tem uma alta demanda de energia e é um dos que mais o produz, com essa informação podemos supor com muita segurança que os Estados Unidos é um dos países que mais utilizam Petróleo para satisfazer sua demanda por energia. E ao pesquisarmos mais a fundo sobre o assunto conseguimos encontrar artigos do Governo brasileiro que confirmam que ele não é só um dos maiores consumidores como foi o maior consumidor nos anos de 2021 e 2022 ocupando a primeira posição.')
@@ -91,8 +106,25 @@ with tab3:
         st.write('O conflito do Iraque (2011-2013) se instaurou logo após as tropas dos Estados Unidos se retirarem do território Iraquiano depois de 8 anos de guerra começaram várias revoltas da população local onde se desprendeu uma Guerra Civil que seguiu até meados de 2017. Além de ser o país com a maior quantidade de conflitos armados dentro do período citado, podemos observar a  grafico 3 e verificar que se trata de um dos 10 países que mais produzem petróleo no mundo.')
         st.write('A Guerra Civil na Líbia(2011) engloba a 16ª região que mais produzem petróleo conforme a Imagem 3, houve uma Guerra Civil entre as forças do governo regente de Muammar Gaddafi contra grupos revolucionistas populares que durou até meados do final do ano. Sendo a 9ª região com a maior média de mortos no período, de acordo com a Imagem 5 podemos citar como um dos possíveis motivos.')
         st.write('Houve outros conflitos na época como a Guerra Civil na Síria(2011) e o Conflito no Bahrein (2011-2014).')
-        st.subheader('Referências Extras')
-        st.write('U.S. ENERGY INFORMATION ADMINISTRATION. **Homepage**. United States: EIA,2024. Disponível em: [https://www.eia.gov](http://https://www.eia.gov). Acesso em:20 nov. 2024.')
+        st.write('Poderemos ver a seguir no tópico de variação de preços como esse período de instabilidade afetou o mercado, e além disso, focando em uma visão do continente Europeu, temos os períodos com maiores números de mortes:')
+        #imagem
+        st.write('O ano de 1991 foi o mais sangrento em termos de mortes por conflito no continente Europeu, seguido por 1992, 2011 e 1990.')        
+        st.write('**População e Demanda por Energia por ano**')
+        st.write('Visando entender o comportamento da demanda por energia alinhado ao crescimento da população, geramos este gráfico abaixo, para ilustrar como essas informações podem se relacionar entre si e trazer importantes pontos e insights. ')
+        st.write('Temos dados consolidados para ambas as informações a partir do ano de 1990 até 2017, como podemos notar no gráfico, o crescimento da população entre 1990 e 2000 possui um crescimento linear, já a partir de 2001 o crescimento é de forma mais acelerada, e mantém esse mesmo ritmo estável até o último ano em que temos esses dados consolidados em 2017.')
+        st.write('Ao observarmos a evolução de Demanda por energia podemos observar um crescimento desacelerado e estável entre os anos 1990 a 1999, já no ano 2000 ocorre um salto nesta de demanda e o crescimento desde então se mostra mais acelerado e menos estável.')
+        st.write('Podemos notar que conforme a população vem crescendo, a demanda por energia também cresce, mas além disso, ocorrem outros fatores que podem causar este crescimento mais acelerado, por isso trazemos algumas hipóteses como: ')         
+        st.write('**Crescimento econômico:** A década de 2000 foi marcada por um crescimento econômico robusto, especialmente em países em desenvolvimento como China e Índia, que passaram a ter um papel crescente na economia global. O aumento da produção industrial, a urbanização e o consumo elevado de bens de consumo aumentaram a necessidade de energia.')
+        st.write('**Aumento do uso de eletrônicos e tecnologias:** A rápida evolução tecnológica e a proliferação de dispositivos eletrônicos principalmente no final dos anos 2000, ocasionou um grande aumento no consumo de energia relacionado ao uso de tecnologias digitais e da internet, tanto para armazenar dados quanto para a operação de servidores e centros de dados.')
+        st.write('**Urbanização:** As cidades se expandiram e houve uma maior construção de infraestrutura, o que exigiu mais eletricidade para iluminação, aquecimento, refrigeração, etc.')
+        st.write('Esses fatores, entre outros, resultaram em um aumento considerável da demanda por energia durante os anos 2000. Ainda que muitos países tenham adotado medidas para mitigar esse crescimento, como a implementação de fontes de energia renováveis mais tarde na década, (o que pode ter causado as mudanças conforme vemos no gráfico a partir de 2008) o aumento de consumo foi uma característica marcante desse período.')
+        st.write('**Variação de preço do Petróleo**')
+        st.write('Neste gráfico abaixo podemos notar as mudanças entre os menores preços praticados do petróleo, comparado aos maiores preços, desde o ano de 1990 a 2017. A partir dessa visualização, é possível perceber de forma clara grandes variações nos preços, para facilitar ainda mais o entendimento das pessoas que acessarem, ao passar o mouse pelos anos, aparecerá uma breve explicação de fatores que contribuíram para grandes mudanças ano ano.')
+        #colocar graficos
+        st.write('A fim de trazer alguns pequenos insights, examinando os dados expostos, temos momentos de estabilidade e pequenas variações de preços, como por exemplo no ano de 1994, onde a oferta e demanda estavam equilibrados, ocasionando uma estabilidade nos preços, com o passar dos anos, é notório o aumento dessa variação, atingindo o seu pico histórico e logo em seguida uma queda acentuada no ano de 2008, tendo por explicação a crise financeira global. Outro bom exemplo é o ano de 2012, onde os preços estavam próximos, porém ambos vivenciando uma alta, devido às sanções ao Irã e instabilidade no Oriente Médio. Lembrando novamente que o dashboard traz pequenas explicações e hipóteses para cada ano descrito.')
+        st.write('Outro ponto interessante para explorar são o maior e menor preço atingido no decorrer de todo o tempo aqui analisado, conforme segue abaixo na imagem:')
+        #colocar graficos
+        st.write('Podemos reparar que o preço médio no decorrer do tempo fica em US$ 52,03.')     
 with tab4:
         st.write('Machine Learning')
         # -*- coding: utf-8 -*-
@@ -710,5 +742,20 @@ with tab4:
         print(f"Erro Absoluto Médio (MAE): {mae}")
 with tab5:
         st.write('Conclusão')
+        paragraphs = [
+        '1º**Demanda de energia por país:** a grande demanda por energia no Reino Unido entre 1990 e 2017 foi impulsionada pelo crescimento econômico, mudanças no estilo de vida e padrões de consumo, aumento da urbanização, bem como o impacto climático e o aumento da população. A transformação da economia, com o crescimento dos setores de serviços e tecnologia, também foi um fator-chave nesse aumento da demanda energética.',
+        '2º**Conflito Armado:**Os conflitos armados têm um impacto significativo no preço do petróleo Brent devido a vários fatores econômicos, geopolíticos e de oferta e demanda.    Qualquer incerteza sobre a oferta ou a segurança do fornecimento de petróleo pode gerar uma reação imediata dos mercados. A diminuição da oferta, a elevação do risco geopolítico, o impacto nos transportes e as sanções econômicas especialmente em regiões-chave produtoras contribuem para a volatilidade do preço do petróleo, levando-o a aumentar.',
+        '3º**População e Demanda por Energia por ano:**Não apenas a população cresce, mas além disso, também ocorrem mudanças no estilo de vida e diversas evoluções tecnológicas, eletrônicas, industriais e urbanas, que expandem a demanda por energia ano após ano. Estes fatores ligados com a crescente população tornam a demanda cada vez maior. ',
+        '4º**Variação de preço do Petróleo:** O petróleo é uma commodity global essencial e altamente sensível a qualquer instabilidade, por isso são diversos os fatores que podem causar uma variação do preço, desde crises econômicas, conflitos armados até a maiores demandas e crescimento exponencial da população com maiores inovações tecnológicas.'
+            ]
 
-
+        for paragraph in paragraphs:
+                st.write(paragraph)
+        st.write('**Referências Extras**')
+        st.write('Disponível em: [https://www.eia.gov](http://https://www.eia.gov). Acesso em:20 nov. 2024.')
+        st.write('Disponível em: [http://www.ipeadata.gov.br/ExibeSerie.aspx?module=m&serid=1650971490&oper=view](http://www.ipeadata.gov.br/ExibeSerie.aspx?module=m&serid=1650971490&oper=view). Acesso em:29 out. 2024.')
+        st.write('Disponível em: [https://www.gov.br/anp/pt-br/centrais-de-conteudo/publicacoes/anuario-estatistico/arquivos-anuario-estatistico-2023/secao-1/secao-1.pdf](https://www.gov.br/anp/pt-br/centrais-de-conteudo/publicacoes/anuario-estatistico/arquivos-anuario-estatistico-2023/secao-1/secao-1.pdf). Acesso em:04 nov. 2024.')
+        st.write('Disponível em: [https://mundoeducacao.uol.com.br/historiageral/guerra-civil-na-libia.htm](https://mundoeducacao.uol.com.br/historiageral/guerra-civil-na-libia.htm). Acesso em:19 nov. 2024.')
+        st.write('Disponível em: [https://sites.ufpe.br/oci/2022/06/13/guerra-civil-na-libia-2011/](https://sites.ufpe.br/oci/2022/06/13/guerra-civil-na-libia-2011/). Acesso em:19 nov. 2024.')
+        st.write('Disponível em: [https://www.bbc.com/portuguese/articles/c84m8d4xdzgo](https://www.bbc.com/portuguese/articles/c84m8d4xdzgo). Acesso em:19 nov. 2024.')
+        st.write('Disponível em: [https://www.bbc.com/portuguese/internacional-55351024](https://www.bbc.com/portuguese/internacional-55351024). Acesso em:19 nov. 2024.')
